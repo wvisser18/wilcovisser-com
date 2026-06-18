@@ -183,26 +183,13 @@ a {
   margin-bottom: 2.5rem;
 }
 
-.headshot-placeholder {
-  flex: 0 0 140px;
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--accent), var(--accent-dark));
-  color: #fff;
-  font-size: 2.2rem;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.headshot.headshot {
+.headshot {
   flex: 0 0 140px;
   width: 140px;
   height: 140px;
   border-radius: 50%;
   object-fit: cover;
+  object-position: top center;
 }
 
 .about-text p {
@@ -256,6 +243,58 @@ a {
 .cert-list li::before {
   content: "— ";
   color: var(--accent-dark);
+}
+
+/* Experience */
+
+.experience {
+  padding-top: 2rem;
+  margin-bottom: 2.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.experience h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.experience-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.experience-list a {
+  color: var(--ink);
+  font-weight: 500;
+  text-decoration: none;
+  border-bottom: 1px solid var(--accent);
+}
+
+.experience-list a:hover {
+  color: var(--accent-dark);
+}
+
+.experience-current {
+  margin-left: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--accent-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.linkedin-cta {
+  display: inline-block;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--accent-dark);
+}
+
+.linkedin-cta:hover {
+  text-decoration: underline;
 }
 
 /* Philosophy / essay */

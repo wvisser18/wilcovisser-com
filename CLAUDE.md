@@ -41,8 +41,15 @@ The site previously ran on WordPress (export preserved at `legacy/WordPress.2023
 
 ## Known gaps
 
-- **No headshot photo.** The old site referenced `WV_cropped.png` but that file was never present in this project folder. The site currently ships with a CSS-only placeholder (circle with "WV" initials) in the About section. Replace it with a real photo by adding e.g. `assets/images/headshot.jpg` and swapping the placeholder markup in `index.html` for an `<img>` tag.
 - No contact form — by design, since a working form needs a third-party backend (Formspree, Netlify Forms, etc.), which conflicts with the "no dependencies" approach. Contact is a `mailto:` link plus the address as plain text.
+
+## Headshot
+
+`assets/images/headshot.jpg` is a resized/compressed copy (600x712, JPEG q80, ~38KB) of the photo Wilco supplied as `WV_cropped.png` (originally 2048x2432, 6.7MB — too large for the web, resized via PowerShell `System.Drawing` since no ImageMagick/Node image library was available). The original full-resolution file was deleted after the resized copy was made; if a higher-resolution crop is ever needed, ask Wilco for the source photo again rather than trying to upscale `headshot.jpg`.
+
+## Recent Experience section
+
+The About section includes a "Recent Experience" list (current role + a line about past employers) where each entry links out to Wilco's LinkedIn profile (`https://www.linkedin.com/in/wilcovisser87/`), since the site intentionally doesn't carry a full structured work history — LinkedIn is the source of truth for that. If more roles are added here later, keep entries short and keep linking to LinkedIn rather than building out a full resume on-site.
 
 ## Working conventions for this repo
 
